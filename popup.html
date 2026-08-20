@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProxyDance</title>
+  <script type="module" crossorigin src="/assets/popup-DaHITjMh.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/messages-Bw2xvcKn.js">
+  <link rel="modulepreload" crossorigin href="/assets/sites-BpsSRoh3.js">
+  <link rel="modulepreload" crossorigin href="/assets/storage-BXSgyzDi.js">
+  <link rel="stylesheet" crossorigin href="/assets/popup-wEZ62gne.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="dot"></span>
+      <span id="mode-label" class="mode-label"></span>
+    </div>
+    <button id="open-options" class="link-btn" type="button"></button>
+  </header>
+
+  <section class="card switch-card">
+    <div class="seg" role="tablist">
+      <button id="btn-direct" class="seg-btn" type="button" data-mode="direct"></button>
+      <button id="btn-proxy" class="seg-btn" type="button" data-mode="proxy"></button>
+    </div>
+    <div id="proxy-summary" class="summary"></div>
+  </section>
+
+  <section class="card" id="status-card">
+    <div class="card-head">
+      <h3 id="proxy-status-title"></h3>
+    </div>
+    <table class="kv" id="status-table">
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h3 id="ip-title"></h3>
+      <button id="btn-detect" class="primary-btn" type="button"></button>
+    </div>
+    <div id="ip-body" class="body">
+      <div id="ip-main" class="ip-main"></div>
+      <table id="ip-table" class="kv">
+        <tbody></tbody>
+      </table>
+    </div>
+    <p id="traffic-warning" class="warning"></p>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h3 id="dns-title"></h3>
+      <span id="dns-verdict" class="dns-verdict info"></span>
+    </div>
+    <ul id="dns-list" class="sites dns-list"></ul>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h3 id="sites-title"></h3>
+      <span id="speed-source" class="hint"></span>
+    </div>
+    <ul id="site-list" class="sites"></ul>
+  </section>
+
+  <footer class="foot" id="foot-note"></footer>
+</body>
+</html>

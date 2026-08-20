@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProxyDance</title>
+  <script type="module" crossorigin src="/assets/options-vQ-0EuTF.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/messages-Bw2xvcKn.js">
+  <link rel="modulepreload" crossorigin href="/assets/storage-BXSgyzDi.js">
+  <link rel="stylesheet" crossorigin href="/assets/options-x_g5uFaL.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <img class="hero-logo" src="/icons/icon-blue128.png" alt="" />
+      <div class="hero-text">
+        <h1 id="app-title">ProxyDance</h1>
+        <p class="hero-sub" id="app-sub"></p>
+      </div>
+      <span class="badge" id="app-version"></span>
+    </header>
+
+    <section class="card">
+      <div class="card-head">
+        <h2 id="proxy-settings-title"></h2>
+        <p class="desc" id="proxy-settings-desc"></p>
+      </div>
+      <div class="grid">
+        <label class="field">
+          <span id="lbl-protocol"></span>
+          <select id="in-protocol">
+            <option value="http">HTTP</option>
+            <option value="https">HTTPS</option>
+            <option value="socks4">SOCKS4</option>
+            <option value="socks5">SOCKS5</option>
+          </select>
+        </label>
+        <label class="field">
+          <span id="lbl-host"></span>
+          <input id="in-host" type="text" spellcheck="false" />
+        </label>
+        <label class="field">
+          <span id="lbl-port"></span>
+          <input id="in-port" type="number" min="1" max="65535" placeholder="8080" />
+        </label>
+        <label class="field">
+          <span id="lbl-username"></span>
+          <input id="in-username" type="text" spellcheck="false" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span id="lbl-password"></span>
+          <input id="in-password" type="password" autocomplete="new-password" />
+        </label>
+      </div>
+      <p class="hint" id="auth-hint"></p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2 id="whitelist-title"></h2>
+        <p class="desc" id="whitelist-hint"></p>
+      </div>
+      <textarea id="in-whitelist" rows="6" spellcheck="false" placeholder="*.example.com"></textarea>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2 id="speed-title"></h2>
+        <p class="desc" id="speed-desc"></p>
+      </div>
+      <label class="field inline">
+        <span id="lbl-sample"></span>
+        <input id="in-sample" type="number" min="64" max="4096" step="64" />
+        <span id="sample-unit">KB</span>
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2 id="lang-title"></h2>
+        <p class="desc" id="lang-desc"></p>
+      </div>
+      <label class="field inline">
+        <span id="lbl-language"></span>
+        <select id="in-language">
+          <option value="auto" id="opt-lang-auto"></option>
+          <option value="zh_CN" id="opt-lang-zh"></option>
+          <option value="en" id="opt-lang-en"></option>
+        </select>
+      </label>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2 id="import-title"></h2>
+        <p class="desc" id="import-desc"></p>
+      </div>
+      <div class="row">
+        <button id="btn-import" class="btn" type="button"></button>
+        <button id="btn-export" class="btn" type="button"></button>
+        <input id="file-import" type="file" accept="application/json,.json" hidden />
+      </div>
+      <p id="import-msg" class="hint"></p>
+    </section>
+
+    <div class="actions">
+      <button id="btn-save" class="primary-btn" type="button"></button>
+      <span id="save-msg" class="save-msg"></span>
+    </div>
+  </main>
+</body>
+</html>
